@@ -27,27 +27,17 @@ function draw() {
                 stroke("hotPink")
             }
             // distance btwn mouse and each circle
-            // let d = dist(x, y, mouseX, mouseY)
-            // let circleSize = map(d, 0, 800, gridSize * 0.2, gridSize)
-            // let r = map(x, 0, width, 20, 250)
-            // let b = map(y, 0, height, 0, 250)
-            // fill(r, 130, b)
+             let d = dist(x, y, mouseX, mouseY)
+             let circleSize = map(d, 100, 900, gridSize * 0.7, gridSize)
+
             rotate((frameCount*0.05+i+j))
-            circle(0, 0, gridSize*0.8)
+            circle(0, 0, circleSize,)
             arc(0, 0, gridSize/2.5, gridSize/2.5, 0, 160, HALF_PI)
             fill("black")
-            circle(0-gridSize*0.1, 0-gridSize*0.125, gridSize*0.05)
-            circle(0+gridSize*0.1, 0-gridSize*0.125, gridSize*0.05)
+            circle(0-gridSize*0.1, 0-gridSize*0.125, gridSize*0.05,)
+            circle(0+gridSize*0.1, 0-gridSize*0.125, gridSize*0.05,)
+            console.log(mouseX, mouseY)
             pop()
-            
-// noFill()
-//       if (random() < 0.5) {
-//         arc(x-gridSize/2, y-gridSize/2, gridSize,gridSize, 0, HALF_PI) // top-left
-//         arc(x+gridSize/2, y+gridSize/2, gridSize,gridSize, PI, PI + HALF_PI) // right-bottom
-//       } else {
-//         arc(x-gridSize/2, y+gridSize/2, gridSize,gridSize, -HALF_PI, 0) // bottom-left
-//         arc(x+gridSize/2, y-gridSize/2, gridSize,gridSize, HALF_PI, PI) // top-right
-//       }
 
         }
     }
